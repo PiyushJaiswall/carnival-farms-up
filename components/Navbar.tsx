@@ -21,53 +21,54 @@ export default function Navbar() {
   const isHome = pathname === '/'
   const navBg = isHome && !scrolled
     ? 'bg-transparent py-6'
-    : 'bg-black/95 backdrop-blur-md py-4 border-b border-luxury-border'
+    : 'bg-luxury-dark/95 backdrop-blur-md py-4 border-b border-white/10 shadow-lg'
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBg}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-xl md:text-2xl font-light tracking-[0.25em] text-amber-400 uppercase">
-          Carnival Farms
+
+        {/* Logo */}
+        <Link href="/"
+          className="font-playfair text-xl md:text-2xl font-semibold text-white tracking-wide">
+          Carnival <span className="text-[#C6A969]">Farms</span>
         </Link>
 
+        {/* Desktop Nav */}
         <ul className="hidden xl:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`text-xs tracking-widest uppercase transition-colors duration-200 ${
-                  pathname === link.href ? 'text-amber-400' : 'text-gray-300 hover:text-amber-400'
-                }`}
-              >
+              <Link href={link.href}
+                className={`font-poppins text-sm font-medium tracking-wide transition-colors duration-200 ${
+                  pathname === link.href
+                    ? 'text-[#C6A969]'
+                    : 'text-gray-300 hover:text-[#C6A969]'
+                }`}>
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
 
-        <Link href="/contact" className="hidden xl:inline-block btn-primary !py-2 !px-5">
+        {/* CTA */}
+        <Link href="/contact" className="hidden xl:inline-block btn-primary !py-2.5 !px-6 text-xs">
           Book Now
         </Link>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="xl:hidden text-white p-1"
-          aria-label="Toggle menu"
-        >
+        {/* Mobile Toggle */}
+        <button onClick={() => setMobileOpen(!mobileOpen)}
+          className="xl:hidden text-white p-1" aria-label="Toggle menu">
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="xl:hidden bg-black/98 border-t border-luxury-border px-6 py-8 flex flex-col gap-5">
+        <div className="xl:hidden bg-luxury-dark border-t border-white/10 px-6 py-8 flex flex-col gap-5">
           {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm tracking-widest uppercase transition-colors ${
-                pathname === link.href ? 'text-amber-400' : 'text-gray-300 hover:text-amber-400'
-              }`}
-            >
+            <Link key={link.href} href={link.href}
+              className={`font-poppins text-sm font-medium tracking-wide transition-colors ${
+                pathname === link.href ? 'text-[#C6A969]' : 'text-gray-300 hover:text-[#C6A969]'
+              }`}>
               {link.label}
             </Link>
           ))}
