@@ -6,41 +6,111 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ─── Base Typography ─── */
 body {
-  font-family: Georgia, Cambria, serif;
-  background-color: #0a0a0a;
-  color: #f5f0e8;
+  font-family: var(--font-inter), 'Helvetica Neue', sans-serif;
+  background-color: #080808;
+  color: #e8e0d5;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 2px; }
+
+/* ─── Selection Color ─── */
+::selection {
+  background: #c9a84c33;
+  color: #c9a84c;
 }
 
 @layer components {
+
+  /* Sections */
   .section-padding {
-    @apply px-6 py-20 md:px-16 lg:px-24;
+    @apply px-6 py-24 md:px-16 lg:px-24;
   }
 
-  .heading-luxury {
-    @apply text-4xl md:text-5xl font-light tracking-widest uppercase;
+  /* Headings */
+  .heading-display {
+    font-family: var(--font-cormorant), serif;
+    @apply text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-wide;
   }
 
+  .heading-section {
+    font-family: var(--font-cormorant), serif;
+    @apply text-4xl md:text-5xl font-light tracking-widest uppercase leading-tight;
+  }
+
+  /* Eyebrow label above headings */
+  .eyebrow {
+    font-family: var(--font-inter), sans-serif;
+    @apply text-[10px] tracking-[0.4em] uppercase text-amber-500 font-normal;
+  }
+
+  /* Body text */
+  .body-text {
+    font-family: var(--font-inter), sans-serif;
+    @apply text-sm font-light leading-[1.9] tracking-wide text-gray-400;
+  }
+
+  /* Buttons */
   .btn-primary {
-    @apply border border-amber-400 text-amber-400 px-8 py-3 text-xs tracking-widest uppercase
-           hover:bg-amber-400 hover:text-black transition-all duration-300 inline-block cursor-pointer;
+    font-family: var(--font-inter), sans-serif;
+    @apply relative border border-amber-500/60 text-amber-400 px-10 py-4 text-[10px] 
+           tracking-[0.3em] uppercase overflow-hidden inline-block cursor-pointer
+           transition-colors duration-500;
+  }
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-amber-400 -translate-x-full transition-transform duration-500;
+    z-index: -1;
+  }
+  .btn-primary:hover {
+    @apply text-black;
+  }
+  .btn-primary:hover::before {
+    @apply translate-x-0;
   }
 
   .btn-solid {
-    @apply bg-amber-400 text-black px-8 py-3 text-xs tracking-widest uppercase
-           hover:bg-amber-300 transition-all duration-300 inline-block;
+    font-family: var(--font-inter), sans-serif;
+    @apply bg-amber-400 text-black px-10 py-4 text-[10px] tracking-[0.3em] uppercase 
+           inline-block hover:bg-amber-300 transition-all duration-300 cursor-pointer;
   }
 
+  /* Cards */
   .card-border {
-    @apply border border-luxury-border hover:border-amber-400/50 transition-all duration-300;
+    @apply border border-white/8 hover:border-amber-500/40 transition-all duration-500;
   }
 
+  /* Forms */
   .form-label {
-    @apply text-xs tracking-widest uppercase text-gray-400 block mb-2;
+    font-family: var(--font-inter), sans-serif;
+    @apply text-[10px] tracking-[0.3em] uppercase text-gray-500 block mb-2;
   }
 
   .form-input {
-    @apply w-full bg-transparent border border-luxury-border px-4 py-3 text-white text-sm
-           focus:border-amber-400 focus:outline-none transition-colors duration-200;
+    font-family: var(--font-inter), sans-serif;
+    @apply w-full bg-transparent border-b border-white/15 px-0 py-3 text-white text-sm 
+           font-light focus:border-amber-400 focus:outline-none transition-colors 
+           duration-300 placeholder:text-gray-600;
+  }
+
+  /* Divider line */
+  .gold-line {
+    @apply w-12 h-px bg-amber-500/60;
   }
 }
