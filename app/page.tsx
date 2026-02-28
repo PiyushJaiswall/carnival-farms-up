@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        backgroundImage="https://images.unsplash.com/photo-1566073771259-470de1bed605?w=1920&auto=format&fit=crop&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&auto=format&fit=crop&q=80"
         eyebrow="Patna, Bihar"
         title="Carnival"
         highlight="Farms"
