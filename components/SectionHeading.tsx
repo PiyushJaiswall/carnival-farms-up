@@ -2,27 +2,25 @@
 import FadeIn from './FadeIn'
 
 interface SectionHeadingProps {
-  eyebrow?: string
+  label?: string
   title: string
   subtitle?: string
   center?: boolean
 }
 
 export default function SectionHeading({
-  eyebrow,
+  label,
   title,
   subtitle,
   center = true,
 }: SectionHeadingProps) {
   return (
-    <FadeIn className={`mb-20 ${center ? 'text-center' : ''}`}>
-      {eyebrow && (
-        <p className="eyebrow mb-5">{eyebrow}</p>
-      )}
-      <h2 className="heading-section text-white mb-6">{title}</h2>
-      <div className={`gold-line mt-0 mb-0 ${center ? 'mx-auto' : ''}`} />
+    <FadeIn className={`mb-16 ${center ? 'text-center' : ''}`}>
+      {label && <p className="section-label mb-4">{label}</p>}
+      <h2 className="heading-section text-white mb-5">{title}</h2>
+      <span className={`gold-line mb-0 ${center ? 'mx-auto' : ''}`} />
       {subtitle && (
-        <p className={`body-text mt-8 max-w-xl ${center ? 'mx-auto' : ''}`}>
+        <p className={`body-text mt-6 max-w-2xl ${center ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}
