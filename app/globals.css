@@ -6,111 +6,113 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ─── Base Typography ─── */
+/* ── Base ── */
 body {
-  font-family: var(--font-inter), 'Helvetica Neue', sans-serif;
-  background-color: #080808;
-  color: #e8e0d5;
-  font-size: 16px;
-  line-height: 1.7;
+  font-family: var(--font-poppins), 'Helvetica Neue', sans-serif;
+  background-color: #0F172A;
+  color: #F8F6F2;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: 0.05em;
+/* ── Headings always use Playfair ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
 }
 
-/* ─── Custom Scrollbar ─── */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #080808; }
-::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 2px; }
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #0F172A; }
+::-webkit-scrollbar-thumb { background: #C6A969; border-radius: 2px; }
 
-/* ─── Selection Color ─── */
-::selection {
-  background: #c9a84c33;
-  color: #c9a84c;
-}
+/* ── Selection ── */
+::selection { background: #C6A96930; color: #C6A969; }
 
 @layer components {
 
-  /* Sections */
+  /* ── Section Padding ── */
   .section-padding {
     @apply px-6 py-24 md:px-16 lg:px-24;
   }
 
-  /* Headings */
-  .heading-display {
-    font-family: var(--font-cormorant), serif;
-    @apply text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-wide;
+  /* ── Container ── */
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  /* ── Typography ── */
+  .heading-hero {
+    font-family: var(--font-playfair), serif;
+    @apply text-5xl md:text-7xl font-semibold tracking-wide leading-[1.1];
   }
 
   .heading-section {
-    font-family: var(--font-cormorant), serif;
-    @apply text-4xl md:text-5xl font-light tracking-widest uppercase leading-tight;
+    font-family: var(--font-playfair), serif;
+    @apply text-3xl md:text-5xl font-semibold leading-tight;
   }
 
-  /* Eyebrow label above headings */
-  .eyebrow {
-    font-family: var(--font-inter), sans-serif;
-    @apply text-[10px] tracking-[0.4em] uppercase text-amber-500 font-normal;
+  .heading-card {
+    font-family: var(--font-playfair), serif;
+    @apply text-xl md:text-2xl font-semibold;
   }
 
-  /* Body text */
+  .section-label {
+    font-family: var(--font-poppins), sans-serif;
+    @apply text-sm uppercase tracking-[0.2em] text-[#C6A969] font-medium;
+  }
+
   .body-text {
-    font-family: var(--font-inter), sans-serif;
-    @apply text-sm font-light leading-[1.9] tracking-wide text-gray-400;
+    font-family: var(--font-poppins), sans-serif;
+    @apply text-base leading-relaxed text-gray-400 font-light;
   }
 
-  /* Buttons */
+  .body-text-lg {
+    font-family: var(--font-poppins), sans-serif;
+    @apply text-lg leading-relaxed text-gray-400 font-light;
+  }
+
+  /* ── Buttons ── */
   .btn-primary {
-    font-family: var(--font-inter), sans-serif;
-    @apply relative border border-amber-500/60 text-amber-400 px-10 py-4 text-[10px] 
-           tracking-[0.3em] uppercase overflow-hidden inline-block cursor-pointer
-           transition-colors duration-500;
-  }
-  .btn-primary::before {
-    content: '';
-    @apply absolute inset-0 bg-amber-400 -translate-x-full transition-transform duration-500;
-    z-index: -1;
-  }
-  .btn-primary:hover {
-    @apply text-black;
-  }
-  .btn-primary:hover::before {
-    @apply translate-x-0;
+    font-family: var(--font-poppins), sans-serif;
+    @apply bg-[#C6A969] text-white rounded-full px-8 py-3 text-sm font-medium
+           tracking-wide hover:bg-[#b89a5c] transition-all duration-300 
+           inline-block cursor-pointer;
   }
 
-  .btn-solid {
-    font-family: var(--font-inter), sans-serif;
-    @apply bg-amber-400 text-black px-10 py-4 text-[10px] tracking-[0.3em] uppercase 
-           inline-block hover:bg-amber-300 transition-all duration-300 cursor-pointer;
+  .btn-outline {
+    font-family: var(--font-poppins), sans-serif;
+    @apply border border-[#C6A969] text-[#C6A969] rounded-full px-8 py-3 text-sm 
+           font-medium tracking-wide hover:bg-[#C6A969] hover:text-white 
+           transition-all duration-300 inline-block cursor-pointer;
   }
 
-  /* Cards */
-  .card-border {
-    @apply border border-white/10 hover:border-amber-500/40 transition-all duration-500;
+  /* ── Cards ── */
+  .card-luxury {
+    @apply bg-[#1E293B] border border-white/10 hover:border-[#C6A969]/40 
+           transition-all duration-500 overflow-hidden;
   }
 
-  /* Forms */
+  /* ── Forms ── */
   .form-label {
-    font-family: var(--font-inter), sans-serif;
-    @apply text-[10px] tracking-[0.3em] uppercase text-gray-500 block mb-2;
+    font-family: var(--font-poppins), sans-serif;
+    @apply text-xs tracking-[0.2em] uppercase text-gray-500 block mb-2 font-medium;
   }
 
   .form-input {
-    font-family: var(--font-inter), sans-serif;
-    @apply w-full bg-transparent border-b border-white/15 px-0 py-3 text-white text-sm 
-           font-light focus:border-amber-400 focus:outline-none transition-colors 
-           duration-300 placeholder:text-gray-600;
+    font-family: var(--font-poppins), sans-serif;
+    @apply w-full bg-transparent border-b border-white/15 px-0 py-3 text-white 
+           text-sm font-light focus:border-[#C6A969] focus:outline-none 
+           transition-colors duration-300 placeholder:text-gray-600;
   }
 
-  /* Divider line */
+  /* ── Gold divider ── */
   .gold-line {
-    @apply w-12 h-px bg-amber-500/60;
+    @apply block w-12 h-0.5 bg-[#C6A969];
+  }
+
+  /* ── Stat box ── */
+  .stat-box {
+    @apply border border-white/10 p-6 hover:border-[#C6A969]/40 transition-colors duration-300;
   }
 }
