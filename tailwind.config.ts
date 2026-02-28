@@ -10,16 +10,21 @@ const config: Config = {
     extend: {
       colors: {
         luxury: {
-          dark: '#080808',
-          card: '#0e0e0e',
-          border: '#1e1e1e',
-          gold: '#c9a84c',
-          cream: '#e8e0d5',
+          dark: '#0F172A',
+          card: '#1E293B',
+          border: '#2A3A52',
+          gold: '#C6A969',
+          cream: '#F8F6F2',
+          text: '#111827',
+          muted: '#6B7280',
         },
       },
       fontFamily: {
-        cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
-        inter: ['var(--font-inter)', 'Helvetica Neue', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'Georgia', 'serif'],
+        poppins: ['var(--font-poppins)', 'Helvetica Neue', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-luxury': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
       },
     },
   },
