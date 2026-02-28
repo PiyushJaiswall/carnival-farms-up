@@ -63,7 +63,7 @@ export default function DiningPage() {
                 { n: '60', l: 'Indoor Covers' },
                 { n: '60', l: 'Outdoor Covers' },
                 { n: 'All Day', l: 'Breakfast to Dinner' },
-                { n: 'Live', l: 'Chef\'s Specials' },
+                { n: 'Live', l: "Chef's Specials" },
               ].map(({ n, l }) => (
                 <div key={l} className="border border-luxury-border p-5">
                   <p className="text-2xl font-light text-amber-400">{n}</p>
