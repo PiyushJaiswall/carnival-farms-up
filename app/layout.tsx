@@ -1,21 +1,21 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import { Playfair_Display, Poppins } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-cormorant',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-playfair',
   display: 'swap',
 })
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-poppins',
   display: 'swap',
 })
 
@@ -26,25 +26,17 @@ export const metadata: Metadata = {
   },
   description:
     'Carnival Farms is a luxury resort in Patna, Bihar with 48–50 premium cottages, grand banquet halls, all-day dining, swimming pool, gazebo, salon, and gym.',
-  keywords: [
-    'resort patna',
-    'carnival farms patna',
-    'luxury resort bihar',
-    'banquet hall patna',
-    'cottages patna',
-    'resort near patna',
-  ],
+  keywords: ['resort patna', 'carnival farms', 'luxury resort bihar', 'banquet hall patna'],
   openGraph: {
     title: 'Carnival Farms | Luxury Resort, Patna Bihar',
-    description:
-      'Experience true luxury at Carnival Farms — premium cottages, fine dining, grand banquet halls and more in Patna.',
+    description: 'Experience true luxury at Carnival Farms — premium cottages, fine dining, grand banquet halls in Patna.',
     type: 'website',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
       <body>
         <Navbar />
         <main>{children}</main>
