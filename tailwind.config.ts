@@ -10,15 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         luxury: {
-          dark: '#0a0a0a',
-          card: '#111111',
-          border: '#2a2a2a',
+          dark: '#080808',
+          card: '#0e0e0e',
+          border: '#1e1e1e',
           gold: '#c9a84c',
-          cream: '#f5f0e8',
+          cream: '#e8e0d5',
         },
       },
       fontFamily: {
-        serif: ['Georgia', 'Cambria', 'serif'],
+        cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
+        inter: ['var(--font-inter)', 'Helvetica Neue', 'sans-serif'],
       },
     },
   },
