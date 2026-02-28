@@ -82,20 +82,84 @@ export const TESTIMONIALS = [
 ]
 
 export const GALLERY_IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1566073771259-470de1bed605?w=800&auto=format&fit=crop&q=80', alt: 'Resort Exterior', category: 'Exterior' },
-  { src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&auto=format&fit=crop&q=80', alt: 'Resort at Night', category: 'Exterior' },
-  { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&auto=format&fit=crop&q=80', alt: 'Resort Gardens', category: 'Exterior' },
-  { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80', alt: 'Garden Cottage', category: 'Cottages' },
-  { src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80', alt: 'Pool View Suite', category: 'Cottages' },
-  { src: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&auto=format&fit=crop&q=80', alt: 'Premium Villa', category: 'Cottages' },
-  { src: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&auto=format&fit=crop&q=80', alt: 'Family Cottage', category: 'Cottages' },
-  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop&q=80', alt: 'Restaurant Interior', category: 'Dining' },
-  { src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&auto=format&fit=crop&q=80', alt: 'Outdoor Dining', category: 'Dining' },
-  { src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80', alt: 'Dining Experience', category: 'Dining' },
-  { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb8a2e?w=800&auto=format&fit=crop&q=80', alt: 'Grand Pavilion', category: 'Banquet' },
-  { src: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&auto=format&fit=crop&q=80', alt: 'Garden Marquee', category: 'Banquet' },
-  { src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80', alt: 'Event Setup', category: 'Banquet' },
-  { src: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800&auto=format&fit=crop&q=80', alt: 'Swimming Pool', category: 'Amenities' },
-  { src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop&q=80', alt: 'Salon & Spa', category: 'Amenities' },
-  { src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop&q=80', alt: 'Fitness Center', category: 'Amenities' },
+  {
+    src: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&auto=format&fit=crop&q=80',
+    alt: 'Resort Exterior',
+    category: 'Exterior',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&auto=format&fit=crop&q=80',
+    alt: 'Resort at Night',
+    category: 'Exterior',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&auto=format&fit=crop&q=80',
+    alt: 'Resort Gardens',
+    category: 'Exterior',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80',
+    alt: 'Garden Cottage',
+    category: 'Cottages',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80',
+    alt: 'Pool View Suite',
+    category: 'Cottages',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&auto=format&fit=crop&q=80',
+    alt: 'Premium Villa',
+    category: 'Cottages',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&auto=format&fit=crop&q=80',
+    alt: 'Family Cottage',
+    category: 'Cottages',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop&q=80',
+    alt: 'Restaurant Interior',
+    category: 'Dining',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&auto=format&fit=crop&q=80',
+    alt: 'Outdoor Dining',
+    category: 'Dining',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80',
+    alt: 'Dining Experience',
+    category: 'Dining',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=80',
+    alt: 'Grand Pavilion',
+    category: 'Banquet',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80',
+    alt: 'Garden Marquee',
+    category: 'Banquet',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&auto=format&fit=crop&q=80',
+    alt: 'Event Setup',
+    category: 'Banquet',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800&auto=format&fit=crop&q=80',
+    alt: 'Swimming Pool',
+    category: 'Amenities',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop&q=80',
+    alt: 'Salon & Spa',
+    category: 'Amenities',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop&q=80',
+    alt: 'Fitness Center',
+    category: 'Amenities',
+  },
 ]
