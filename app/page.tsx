@@ -5,6 +5,7 @@ import DiningSection from '@/components/DiningSection'
 import BanquetPreview from '@/components/BanquetPreview'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import EnquiryForm from '@/components/EnquiryForm'
+import QuoteSection from '@/components/QuoteSection'
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       />
       <AmenitiesStrip />
       <RoomsPreview />
+      <QuoteSection />
       <DiningSection />
       <BanquetPreview />
       <TestimonialsSection />
